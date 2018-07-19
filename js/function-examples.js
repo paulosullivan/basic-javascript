@@ -2,6 +2,8 @@
 // Functions //
 //***********//
 
+// NB Functions are objects
+
 function sayHello() {
     console.log("Hello");
 }

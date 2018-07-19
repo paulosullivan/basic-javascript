@@ -1,4 +1,6 @@
+//***********//
 // Variables //
+//***********//
 
 var x; // Simple declarations without a definition = undefined
 console.log("x = " + x);
@@ -19,7 +21,9 @@ console.log("num is a type of " + typeof num);
 num = "text" // This is allowed
 console.log("num is now a type of " + typeof num);
 
+//****************************//
 // Type Coercion and Equality //
+//****************************//
 
 // == (equality)
 // === (identity)
@@ -31,7 +35,9 @@ console.log(a === b); // true
 console.log(a == c); // true
 console.log(a === c); // false - no type coercion with triple equals
 
-// Objects
+//*********//
+// Objects //
+//*********//
 
 var myObj = {
     "prop1" : "value 1",
@@ -50,7 +56,10 @@ console.log("prop3 = " + myObj.prop3);
 delete myObj.prop3
 console.log("prop3 = " + myObj.prop3); // Undefined
 
+//********//
 // Arrays //
+//********//
+
 // Arrays are also classed as objects. Even functions are objects in JS
 // Uses zero index
 
@@ -70,12 +79,45 @@ console.log("myArray2.length = " + myArray2.length); // 4 - same object on the h
 myArray[99] = "One Hundred";
 console.log("myArray.length = " + myArray.length); // 100 - Weird
 
+var myArray3 = ["One", "Two", "Three"];
+
+// Add and remove from the end of the array
+myArray3.push("Four");
+console.log(myArray3.length) // 4
+var four = myArray3.pop();
+console.log(myArray3.length) // 3
+console.log(four) // Four
+
+// Add and remove from the start of the array
+myArray3.unshift("Zero");
+console.log(myArray3.length) // 4
+var zero = myArray3.shift();
+console.log(myArray3.length) // 3
+console.log(zero) // Zero
+
 // Wrapper Objects For Primitives //
 // number has Number
 // string has String
 // boolean has Boolean
 
+// Loop over an array (Can also use a normal for clause)
+console.log("Logging each of the elements in myArray3");
+var elementFunction = function (element) {
+    console.log(element)
+};
+myArray3.forEach(elementFunction); // JS actually passes the following foreach(function(item, index, array))
+
 // EG string is a primitive, but we can call a length property on strings?
 // This works because JS automatically converts the string primitive to a String object
 var someString = "blah";
 console.log(someString.length);
+
+//**********************//
+// Other Useful Objects //
+//**********************//
+
+// Math
+
+// Date
+var now = new Date();
+console.log(now.getDate());
