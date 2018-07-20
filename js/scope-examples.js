@@ -20,6 +20,18 @@ function myFunc() {
 myFunc();
 console.log("Outside function - functionB = " + functionB); // Now it works
 
+// Another side-effect of the two step process (compilation and interpretation)
+function outer() {
+    var x = 10;
+    function inner() {
+        var y = x;
+        console.log("inner.y = " + y); // Undefined. The compiler adds x to the inner scope stack, but the interpreter never gets a chance to set x in the inner scope stack before this line executes.
+        var x = 20;
+    }
+    inner(); // Hint: Don't forget to call inner
+}
+outer();
+
 // What is the global container?
 // When running in a browser. Adding global variables and functions is akin to attaching these objects to the window object
 // EG 1
