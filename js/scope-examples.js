@@ -12,6 +12,7 @@ console.log("Outside if - blockA = " + blockA); // Also works
 function myFunc() {
     var functionA = 30;
     functionB = 40; // Undeclared variable. Will get added to the global scope. Added by the interpreter (not at the compilation stage).
+    				// You can disable this and other quirks using strict mode.
     console.log("Inside function - functionA = " + functionA); // Works as expected
     console.log("Inside function - functionB = " + functionB); // Works as expected.
 }
