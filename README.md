@@ -14,4 +14,13 @@ References
 https://www.youtube.com/user/koushks/playlists?shelf_id=1&sort=dd&view=50
 https://github.com/getify/You-Dont-Know-JS
 
+Example Order
+Basic
+Function
+Scope
+Scope Hoisting
+Strict Mode
+Closure
+Closure Callbacks
+
 
