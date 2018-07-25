@@ -22,7 +22,7 @@ Scope Hoisting
 Strict Mode  
 Closure  
 Closure Callbacks  
-Obejct Creation  
-
-
+Object Creation  
+Calling Functions
+Prototypes
 
