@@ -31,3 +31,9 @@ person1.printAge();
 person2.printAge();
 console.log(person1.__proto__); // Person { printName: [Function], printAge: [Function] }
 console.log(person2.__proto__); // Person { printName: [Function], printAge: [Function] }
+
+// We can also grab the constructor function associated with the prototype
+console.log(person1.__proto__.constructor); // [Function: Person]
+console.log(person2.__proto__.constructor); // [Function: Person]
+
+// FYI It is not recommended that you use the __proto__ property
