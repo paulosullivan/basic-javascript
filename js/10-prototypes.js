@@ -37,3 +37,10 @@ console.log(person1.__proto__.constructor); // [Function: Person]
 console.log(person2.__proto__.constructor); // [Function: Person]
 
 // FYI It is not recommended that you use the __proto__ property
+
+// Now lets create multiple levels to help mimic inheritance
+
+function Manager(department) {
+    this.department = department;
+}
+console.log(man1);
