@@ -38,13 +38,13 @@ outer();
 // EG 1
 var a = 10;
 console.log("a = " + a);
-console.log("window.a = " + window.a); // Same as above
+// console.log("window.a = " + window.a); // Same as above
 // EG 2
 function test() {
     console.log("test");
 }
 test();
-window.test();
+// window.test();
 
 // Global variables and functions are available to all scripts running on a page (i.e. they all get attached to the window object)
 // How to declare a function and execute it (without creating a global function)
@@ -52,3 +52,31 @@ window.test();
 (function () {
     console.log("Executing anonymous function using the IIFE strategy");
 })();
+
+//*******************//
+// ES 6 Improvements //
+//*******************//
+
+// Block scope variables - no hoisting
+{
+    let blockScopedVar = 1;
+}
+
+// Block scope function
+function test2() {
+    console.log("Global test2 function");
+}
+test2(); // Prints Global
+{
+    function test2() {
+        console.log("Outer block scoped test2 function");
+    }
+    {
+        function test2() {
+            console.log("Inner block scoped test2 function");
+        }
+        test2(); // Prints Inner ...
+    }
+    test2(); // Prints Outer ...
+}
+test2(); // !!! Prints Outer ... and not Global ...

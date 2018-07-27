@@ -121,3 +121,64 @@ var add2 = function() {
     return result;
 };
 console.log("Adding a random amount of numbers. Result = " + add2(10, 10, 10));
+
+//*******************//
+// ES 6 Improvements //
+//*******************//
+
+// TODO Arrow Functions
+// Some simple examples here, but needs more investigation.
+
+var array = [5, 10, 15, 20];
+console.log("array = " + array);
+
+// Old Method
+var results = array.map(function(element) { return element + 5;});
+console.log("results = " + results);
+
+// New Method
+results = array.map((element) => element + 10);
+console.log("results = " + results);
+
+// Old Method
+results = array.reduce(function(sum, element) { return sum += element;});
+console.log("sum = " + results);
+
+// New Method
+results = array.reduce((sum, element) => sum += element);
+console.log("sum = " + results);
+
+// Old Method
+results = array.filter(function(element) { return element > 10;});
+console.log("filtered results = " + results);
+
+// New Method
+results = array.filter(element => element > 10); // Notice how you can also remove the parameter parenthesis
+console.log("filtered results = " + results);
+
+// Default Parameters
+function addParams (x, y = 20, z = 30) {
+    return x + y + z;
+}
+console.log("adParams = " + addParams(10));
+
+// Shorthand for writing functions on objects
+
+// Old Method
+var obj = {
+    test : function () {
+        // ...
+    }
+}
+
+// New Method
+obj = {
+    test() {
+        // ...
+    }
+}
+
+// Importing functions
+// Not supported by Node at this time
+// import * as basic from "1-basic.js";
+// basic.exportedFunction(basic.exportedVar);

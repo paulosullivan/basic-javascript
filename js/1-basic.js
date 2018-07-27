@@ -121,3 +121,35 @@ console.log(someString.length);
 // Date
 var now = new Date();
 console.log(now.getDate());
+
+//*******************//
+// ES 6 Improvements //
+//*******************//
+
+const PI = 3.141593;
+
+// String Templates
+var customer = { name: "Foo" };
+var card = { amount: 7, product: "Bar", unitprice: 42 };
+var message = `Hello ${customer.name}, 
+want to buy ${card.amount} ${card.product} for
+a total of ${card.amount * card.unitprice} bucks?`;
+console.log("message = " + message);
+
+// Exporting Objects (Called from functions.js)
+// Not supported by Node at this time
+/*
+export function exportedFunction(param) {
+    console.log("exported function: param = " + param);
+}
+export var exportedVar = 75;
+*/
+
+// New data structures
+var mySet = new Set();
+mySet.add("Hello").add("World");
+mySet.forEach(element => console.log(element));
+var myMap = new Map();
+myMap.set("firstWord", "Hello").set("secondWord", "World");
+myMap.forEach((element, key) => console.log(key + " : " + element)); // Two params ... so keep the parenthesis. Also notice the 1st param in the forEach function is the value, and not the key
+
