@@ -1,3 +1,4 @@
+"use strict";
 // TS uses postfix declarations
 var a;
 var b;

@@ -49,4 +49,22 @@ TypeScript	->	NodeJS compiler	->	JavaScript	-> Browser
 												-> NodeJS Runtime  
 												-> ...  
 
-Recommended Dev Environment - Visual Studio Code
+Recommended Dev Environment - Visual Studio Code  
+
+Compile Options  
+Define name of JS file  
+	tsc myFile.ts --out blah.js  
+Watch for changes (when ts file is saved) 
+	tsc myFile.ts --watch  
+More options  
+	tsc -help  
+Generate tsconfig.json file and compile all ts files  
+This gives you a json file with some of the settings uncommented
+	tsc --init  
+	tsc  
+	
+// Create Node project  
+npm init  -> creates a package.json file  
+Add a start command to the script section (e.g. "start" : "tsc && node js/index.js")
+npm start
+

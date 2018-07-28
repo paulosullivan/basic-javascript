@@ -1,15 +1,16 @@
-var Programmer = /** @class */ (function () {
-    function Programmer(firstName, lastName) {
+"use strict";
+var Programmer2 = /** @class */ (function () {
+    function Programmer2(firstName, lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
-    Programmer.prototype.getFullName = function () {
+    Programmer2.prototype.getFullName = function () {
         return this.firstName + " " + this.lastName;
     };
-    return Programmer;
+    return Programmer2;
 }());
-var programmer = new Programmer("Joe", "Bloggs");
-var programmer2 = new Programmer("Anne", "Smith");
+var prog1 = new Programmer2("Joe", "Bloggs");
+var prog2 = new Programmer2("Anne", "Smith");
 console.log(programmer);
 console.log(programmer2);
 // TS also supports duck typing -> If it looks like a duck ...
@@ -21,5 +22,5 @@ var randomObj = {
     },
     getFullName2: function () { return "test"; }
 };
-programmer2 = randomObj;
-console.log(programmer2);
+prog2 = randomObj;
+console.log(prog2);

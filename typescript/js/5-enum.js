@@ -1,3 +1,4 @@
+"use strict";
 var DaysOfWeek;
 (function (DaysOfWeek) {
     DaysOfWeek[DaysOfWeek["MON"] = 0] = "MON";

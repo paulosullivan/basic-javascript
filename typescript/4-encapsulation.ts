@@ -2,7 +2,7 @@
 // private - inside class
 // protected - inside class or inside subclass
 
-class Person {
+class Person3 {
   private firstName : string;
   private lastName : string;
   
@@ -29,7 +29,7 @@ class Person {
 
 // Shorthand for attributes and constructor
 
-class Person2 {
+class Person4 {
   // private firstName : string;
   // private lastName : string;
   
@@ -56,7 +56,7 @@ class Person2 {
 
 // ReadOnly
 // Can be defined in two places. A constructor or when it is being declared and defined at the same time
-class Person3 {
+class Person5 {
   
   constructor(private firstName : string, private lastName : string, readonly dob : number) {
     

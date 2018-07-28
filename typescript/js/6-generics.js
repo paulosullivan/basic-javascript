@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -17,33 +18,33 @@ function myFunc2(input) {
     return input;
 }
 // More ellaborate example
-var Person = /** @class */ (function () {
-    function Person(firstName, lastName) {
+var Person6 = /** @class */ (function () {
+    function Person6(firstName, lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
-    Person.prototype.getFullName = function () {
+    Person6.prototype.getFullName = function () {
         return this.firstName + " " + this.lastName;
     };
-    Person.prototype.sayHello = function () {
+    Person6.prototype.sayHello = function () {
         console.log("Hello World");
     };
-    return Person;
+    return Person6;
 }());
-var Programmer = /** @class */ (function (_super) {
-    __extends(Programmer, _super);
-    function Programmer() {
+var Programmer3 = /** @class */ (function (_super) {
+    __extends(Programmer3, _super);
+    function Programmer3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    return Programmer;
-}(Person));
+    return Programmer3;
+}(Person6));
 var Manager = /** @class */ (function (_super) {
     __extends(Manager, _super);
     function Manager() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     return Manager;
-}(Person));
+}(Person6));
 // This function would always return a reference to a Person
 function echoPerson(person) {
     return person;
@@ -52,10 +53,10 @@ function echoPerson(person) {
 function echoPerson2(person) {
     return person;
 }
-var person = new Person("Joe", "Bloggs");
-var programmer = new Programmer("John", "Doe");
+var person = new Person6("Joe", "Bloggs");
+var prog = new Programmer3("John", "Doe");
 var manager = new Manager("Jane", "Doe");
 person = echoPerson2(person);
-programmer = echoPerson2(programmer);
+prog = echoPerson2(prog);
 manager = echoPerson2(manager);
 // var str = echoPerson("string"); -> Argument of type '"string"' is not assignable to parameter of type 'Person'

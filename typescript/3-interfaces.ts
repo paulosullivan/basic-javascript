@@ -1,10 +1,10 @@
-interface Person {
+interface Person2 {
   firstName : string;
   lastName : string;
   getFullName() : String;
 }
 
-class Programmer implements Person {
+class Programmer2 implements Person2 {
   firstName : string;
   lastName : string;
   constructor(firstName : string, lastName : string) {
@@ -16,8 +16,8 @@ class Programmer implements Person {
   }
 }
 
-var programmer : Programmer = new Programmer("Joe", "Bloggs");
-var programmer2 : Person = new Programmer("Anne", "Smith");
+var prog1 : Programmer2 = new Programmer2("Joe", "Bloggs");
+var prog2 : Person2 = new Programmer2("Anne", "Smith");
 console.log(programmer);
 console.log(programmer2);
 
@@ -30,5 +30,5 @@ var randomObj = {
   },
   getFullName2 : () => "test"
 };
-programmer2 = randomObj;
-console.log(programmer2);
+prog2 = randomObj;
+console.log(prog2);
