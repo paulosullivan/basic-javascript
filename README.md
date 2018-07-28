@@ -68,3 +68,10 @@ npm init  -> creates a package.json file
 Add a start command to the script section (e.g. "start" : "tsc && node js/index.js")
 npm start
 
+// Download js project from NPM (updates package.json file)  
+Collection Utilities  
+npm install lodash --save  
+Download its type definitions for auto-completion  
+npm install @types/lodash --save-dev  
+Import files from package as opposed to a folder
+import * as _ from 'lodash';
