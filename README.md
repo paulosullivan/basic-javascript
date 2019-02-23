@@ -28,7 +28,8 @@ Transpiling is a simple form of compilation (where the source and target languag
 It is a typed superset of JS. The flip side is that all JS can also be classed as valid TS  
 Transpiles newer JS features (such as ES6 features) into older JS versions  
 Runs on all environments that support ECMAScript3 and above (including all browsers and NodeJS) 
-Obviously, it is the compilation step that catches any type errors before the code is run  
+Obviously, it is the compilation step that catches any type errors before the code is run.
+It also provides a lot of support for IDEs, which can show up errors as you type and give you proper code completion.
 
 Some JS Issues  
 We now have classes in JS, but everything is still a var, and so we don't have any type checking  
